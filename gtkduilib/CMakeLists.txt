@@ -63,7 +63,7 @@ set(SRC
     WindowImpBase.h
 )
 
-add_library(gtkduilib SHARED ${SRC})
+add_library(gtkduilib STATIC ${SRC})
 target_include_directories(gtkduilib PUBLIC ${GTK3_INCLUDE_DIRS})
 target_link_libraries(gtkduilib ${GTK3_LIBRARIES})
 
