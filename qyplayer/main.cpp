@@ -153,14 +153,14 @@ int _tmain(int argc, _TCHAR* argv[])
 int main(int argc, char* argv[])
 #endif
 {
-    wprintf(L"%s\n", "ÖÐ¹ú");
+    wprintf(L"%s\n", "ï¿½Ð¹ï¿½");
     //CResourceMgr ss;
 
     gtk_init(NULL, NULL);
 
     CSkinWnd Window;
     //CResourceMgr::GetInstance().SetResourePath(L"/home/pgboy/qyplayer");
-    CResourceMgr::GetInstance().SetResourePath(L"../skin/qyplayer");
+    CResourceMgr::GetInstance().SetResourePath(L"../../skin/qyplayer");
 
     Window.Create(0, 0, /*400*/800, /*500*/570);
 

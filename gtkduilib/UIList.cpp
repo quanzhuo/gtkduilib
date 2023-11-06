@@ -975,11 +975,11 @@ BOOL CListBodyUI::SortItems(PULVCompareFunc pfnCompare, UINT_PTR dwData)
 		return FALSE;
 	m_pCompareFunc = pfnCompare;
 	CUIControl **pData = (CUIControl **)m_items.GetData();
-	#ifdef WIN32
-	qsort_s(m_items.GetData(), m_items.GetSize(), sizeof(CUIControl*), CListBodyUI::ItemComareFunc, this);
-	#else
-	qsort_r(m_items.GetData(), m_items.GetSize(), sizeof(CUIControl*), CListBodyUI::ItemComareFunc, this);
-	#endif
+	// #ifdef WIN32
+	// qsort_s(m_items.GetData(), m_items.GetSize(), sizeof(CUIControl*), CListBodyUI::ItemComareFunc, this);
+	// #else
+	// qsort_r(m_items.GetData(), m_items.GetSize(), sizeof(CUIControl*), CListBodyUI::ItemComareFunc, this);
+	// #endif
 	IListItemUI *pItem = NULL;
 	for (int i = 0; i < m_items.GetSize(); ++i){
 		pItem = (IListItemUI*)(static_cast<CUIControl*>(m_items[i])->GetInterface(L"ListItem"));
@@ -1559,7 +1559,7 @@ void CListHeaderItemUI::DoEvent(TEventUI& event)
         CUIRect rcSeparator = GetThumbRect();
 
 		//
-		// Ôö¼Ó·Ö¸ô·ûÇøÓò£¬·½±ãÓÃ»§ÍÏ¶¯
+		// ï¿½ï¿½ï¿½Ó·Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ï¶ï¿½
 		//
 
 		if (m_iSepWidth>=0)
@@ -1615,7 +1615,7 @@ void CListHeaderItemUI::DoEvent(TEventUI& event)
         CUIRect rcSeparator = GetThumbRect();
 
 		//
-		// Ôö¼Ó·Ö¸ô·ûÇøÓò£¬·½±ãÓÃ»§ÍÏ¶¯
+		// ï¿½ï¿½ï¿½Ó·Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬·ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ï¶ï¿½
 		//
 
 		if (m_iSepWidth>=0)

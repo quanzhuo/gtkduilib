@@ -174,7 +174,7 @@ int main(int argc, char* argv[])
 
     CSkinWnd Window;
     //CResourceMgr::GetInstance().SetResourePath(L"/home/pgboy/qyplayer");
-    CResourceMgr::GetInstance().SetResourePath(L"../skin/360SafeRes");
+    CResourceMgr::GetInstance().SetResourePath(L"../../skin/360SafeRes");
 
     Window.Create(0, 0, /*400*/800, /*500*/570);
 
