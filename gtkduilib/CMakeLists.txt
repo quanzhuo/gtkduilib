@@ -66,3 +66,7 @@ set(SRC
 add_library(gtkduilib SHARED ${SRC})
 target_include_directories(gtkduilib PUBLIC ${GTK3_INCLUDE_DIRS})
 target_link_libraries(gtkduilib ${GTK3_LIBRARIES})
+
+if(WIN32)
+    target_link_directories(gtkduilib PUBLIC ${GTK3_LIBRARY_DIRS})
+endif()
