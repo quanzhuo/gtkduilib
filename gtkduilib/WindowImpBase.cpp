@@ -112,7 +112,7 @@ bool CWindowImpBase::OnCreate(int uMsg, WPARAM wParam, LPARAM lParam)
 
     CDialogBuilder builder;
     if (m_PaintManager.GetResourcePath().IsEmpty())
-    {	// ÔÊÐí¸üÁé»îµÄ×ÊÔ´Â·¾¶¶¨Òå
+    {	// å…è®¸æ›´çµæ´»çš„èµ„æºè·¯å¾„å®šä¹‰
         CDuiString strResourcePath=m_PaintManager.GetInstancePath();
         strResourcePath+=GetSkinFolder().GetData();
         m_PaintManager.SetResourcePath(strResourcePath.GetData());
@@ -164,7 +164,7 @@ bool CWindowImpBase::OnCreate(int uMsg, WPARAM wParam, LPARAM lParam)
     ASSERT(pRoot);
     if (pRoot==NULL)
     {
-        MessageBox(NULL,_T("¼ÓÔØ×ÊÔ´ÎÄ¼þÊ§°Ü"),_T("Duilib"),MB_OK|MB_ICONERROR);
+        MessageBox(NULL,_T("åŠ è½½èµ„æºæ–‡ä»¶å¤±è´¥"),_T("Duilib"),MB_OK|MB_ICONERROR);
         ExitProcess(1);
         return 0;
     }
@@ -215,7 +215,7 @@ bool CWindowImpBase::OnLButtonDown(int Msg, WPARAM wParam, LPARAM /*lParam*/)
     if (Event->y < rcCaption.bottom){
         
         //
-        // ÅÐ¶ÏÊÇ·ñÔÚbuttonÀàµÄ¿Ø¼þÄÚ,Èç¹ûÔÚÕâÀïÃæÔò²»½øÐÐÍÏ×§¶¯×÷
+        // åˆ¤æ–­æ˜¯å¦åœ¨buttonç±»çš„æŽ§ä»¶å†…,å¦‚æžœåœ¨è¿™é‡Œé¢åˆ™ä¸è¿›è¡Œæ‹–æ‹½åŠ¨ä½œ
         //
         
         

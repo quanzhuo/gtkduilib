@@ -1,5 +1,5 @@
 /*! \file UITileLayout.h
-	\brief Õâ¸öÎÄ¼şÃèÊöÁË´É×©ĞÍ²¼¾ÖµÄÀà¼°Æäº¯ÊıµÄ¶¨Òå
+	\brief è¿™ä¸ªæ–‡ä»¶æè¿°äº†ç“·ç –å‹å¸ƒå±€çš„ç±»åŠå…¶å‡½æ•°çš„å®šä¹‰
 	\author duilib
 	\date 12:10:2013   16:38
 	\copyright GNU Public License

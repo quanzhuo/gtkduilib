@@ -35,7 +35,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 	rcTemp = m_rcItem;
 
 	//
-	// µ÷ÕûÄÚ±ß¾à
+	// è°ƒæ•´å†…è¾¹è·
 	//
 
 	rcTemp.left += m_rcInset.left;
@@ -49,7 +49,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 	}
 
 	//
-	// Èç¹ûÓĞ¹ö¶¯Ìõ£¬¼õÈ¥¹ö¶¯ÌõµÄ¿í¶È
+	// å¦‚æœæœ‰æ»šåŠ¨æ¡ï¼Œå‡å»æ»šåŠ¨æ¡çš„å®½åº¦
 	//
 	
 	if(m_pVerticalScrollBar && m_pVerticalScrollBar->IsVisible()) 
@@ -66,22 +66,22 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 	if( m_pHorizontalScrollBar && m_pHorizontalScrollBar->IsVisible() ) 
 		szAvailable.cx += m_pHorizontalScrollBar->GetScrollRange();
 
-	int nAdjustables = 0; //Òªµ÷Õû¿Ø¼şµÄ¸öÊı
-	int cyFixed = 0;	  //¿Ø¼ş¹Ì¶¨µÄ¿í¶È
-	int nEstimateNum = 0; //µ÷Õû¿Ø¼şµÄ¸öÊı
+	int nAdjustables = 0; //è¦è°ƒæ•´æ§ä»¶çš„ä¸ªæ•°
+	int cyFixed = 0;	  //æ§ä»¶å›ºå®šçš„å®½åº¦
+	int nEstimateNum = 0; //è°ƒæ•´æ§ä»¶çš„ä¸ªæ•°
 
 	for( int it1 = 0; it1 < m_items.GetSize(); it1++ ) {
 		CUIControl* pControl = static_cast<CUIControl*>(m_items[it1]);
 		
 		//
-		// ¿Ø¼ş²»¿É¼û²»½øĞĞ´¦Àí
+		// æ§ä»¶ä¸å¯è§ä¸è¿›è¡Œå¤„ç†
 		//
 		
 		if(!pControl->IsVisible()) 
 			continue;
 		
 		//
-		// ¿Ø¼şÎªfloatÀàĞÍµÄ²»½øĞĞ´¦Àí
+		// æ§ä»¶ä¸ºfloatç±»å‹çš„ä¸è¿›è¡Œå¤„ç†
 		//
 		
 		if(pControl->IsFloat()) 
@@ -91,14 +91,14 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		if(sz.cy == 0) {
 			
 			//
-			// ¸ß¶ÈµÈÓÚ0ĞèÒªÎÒÃÇÀ´¼ÆËã
+			// é«˜åº¦ç­‰äº0éœ€è¦æˆ‘ä»¬æ¥è®¡ç®—
 			//
 			
 			nAdjustables++;
 		}else{
 			
 			//
-			// ²»ÄÜ³¬³ö¿Ø¼şµÄÉèÖÃµÄ×îĞ¡ºÍ×î´óÖµ
+			// ä¸èƒ½è¶…å‡ºæ§ä»¶çš„è®¾ç½®çš„æœ€å°å’Œæœ€å¤§å€¼
 			//
 			
 			if( sz.cy < pControl->GetMinHeight() ) 
@@ -108,7 +108,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		}
 		
 		//
-		// ¼ÓÉÏÏÂÍâ±ß¾à
+		// åŠ ä¸Šä¸‹å¤–è¾¹è·
 		//
 		
 		cyFixed += sz.cy + pControl->GetPadding().top + pControl->GetPadding().bottom;
@@ -116,7 +116,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 	}
 	
 	//
-	// ¼ÓÉÏ×Ó¿Ø¼şÖ®¼äµÄ¶îÍâ¾àÀë
+	// åŠ ä¸Šå­æ§ä»¶ä¹‹é—´çš„é¢å¤–è·ç¦»
 	//
 	
 	cyFixed += (nEstimateNum - 1) * m_iChildPadding;
@@ -129,7 +129,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 	int cyExpand = 0;
 	
 	//
-	// ¼ÆËãÒªµ÷ÕûµÄÃ¿¸ö¿Ø¼şµÄÆ½¾ù¸ß¶È
+	// è®¡ç®—è¦è°ƒæ•´çš„æ¯ä¸ªæ§ä»¶çš„å¹³å‡é«˜åº¦
 	//
 	
 	if( nAdjustables > 0 ) 
@@ -137,7 +137,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 
 	//
 	// Position the elements
-	// ¼õÈ¥¹ö¶¯ÌõµÄÎ»ÖÃ
+	// å‡å»æ»šåŠ¨æ¡çš„ä½ç½®
 	//
 
 	SIZE szRemaining = szAvailable;
@@ -169,7 +169,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 			iAdjustable++;
 			
 			//
-			// ¸³Æ½¾ùÖµ
+			// èµ‹å¹³å‡å€¼
 			//
 			
 			sz.cy = cyExpand;
@@ -183,7 +183,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 			} 
 			
 			//
-			// ²»ÄÜ³¬¹ı¿Ø¼şµÄ×î´óÓë×îĞ¡Öµ
+			// ä¸èƒ½è¶…è¿‡æ§ä»¶çš„æœ€å¤§ä¸æœ€å°å€¼
 			//
 			
 			if( sz.cy < pControl->GetMinHeight() ) sz.cy = pControl->GetMinHeight();
@@ -191,7 +191,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		}else{
 			
 			//
-			// ¹Ì¶¨¸ß¶ÈµÄ¿Ø¼ş
+			// å›ºå®šé«˜åº¦çš„æ§ä»¶
 			//
 			
 			if( sz.cy < pControl->GetMinHeight() ) sz.cy = pControl->GetMinHeight();
@@ -200,7 +200,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		}
 		
 		//
-		// µ÷Õû¿í¶ÈµÄÖµ
+		// è°ƒæ•´å®½åº¦çš„å€¼
 		//
 		
 		sz.cx = pControl->GetFixedWidth();
@@ -210,7 +210,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		if( sz.cx > pControl->GetMaxWidth() ) sz.cx = pControl->GetMaxWidth();
 		
 		//
-		// Éú³É²¢ÉèÖÃĞÂµÄPOS
+		// ç”Ÿæˆå¹¶è®¾ç½®æ–°çš„POS
 		//
 		
 		CUIRect rcCtrl(iPosX + rcPadding.left, iPosY + rcPadding.top, iPosX + rcPadding.left + sz.cx, 
@@ -218,7 +218,7 @@ void CUIVerticalLayout::SetPos(const CUIRect& rc)
 		pControl->SetPos(rcCtrl);
 		
 		//
-		// ´¦ÀíÏÂChildPadding
+		// å¤„ç†ä¸‹ChildPadding
 		//
 		
 		iPosY += sz.cy + m_iChildPadding + rcPadding.top + rcPadding.bottom;

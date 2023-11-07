@@ -35,7 +35,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 	rcTemp = m_rcItem;
 
 	//
-	// µ÷ÕûÄÚ±ß¾à
+	// è°ƒæ•´å†…è¾¹è·
 	//
 
 	rcTemp.left += m_rcInset.left;
@@ -44,7 +44,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 	rcTemp.bottom -= m_rcInset.bottom;
 	
 	//
-	// Ã»ÓĞ×Ó¿Ø¼ş²»´¦Àí
+	// æ²¡æœ‰å­æ§ä»¶ä¸å¤„ç†
 	//
 	
 	if( m_items.GetSize() == 0) {
@@ -53,7 +53,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 	}
 	
 	//
-	// ¹ö¶¯Ìõ²»±ä
+	// æ»šåŠ¨æ¡ä¸å˜
 	//
 	
 	if( m_pVerticalScrollBar && m_pVerticalScrollBar->IsVisible() ) 
@@ -63,7 +63,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 
 	//
 	// Determine the width of elements that are sizeable
-	// ¼ÓÉÏ¹ö¶¯ÌõµÄ¿í¶È
+	// åŠ ä¸Šæ»šåŠ¨æ¡çš„å®½åº¦
 	//
 
 	CUISize szAvailable(rcTemp.GetWidth(), rcTemp.GetHeight());
@@ -75,14 +75,14 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 	int nEstimateNum = 0;
 
 	//
-	// ¼ÆËã×Ó¿Ø¼şµÄ×ÜµÄ¹Ì¶¨¿í¶È
+	// è®¡ç®—å­æ§ä»¶çš„æ€»çš„å›ºå®šå®½åº¦
 	//
 	
 	for(int it1 = 0; it1 < m_items.GetSize(); it1++) {
 		CUIControl* pControl = static_cast<CUIControl*>(m_items[it1]);
 		
 		//
-		// Ìø¹ı²»¿É¼ûºÍÊôĞÔÉèÖÃÎªFloatµÄ¡£
+		// è·³è¿‡ä¸å¯è§å’Œå±æ€§è®¾ç½®ä¸ºFloatçš„ã€‚
 		//
 		
 		if(!pControl->IsVisible()) 
@@ -108,7 +108,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
     int cxNeeded = 0;
 	
 	//
-	// cxExpand ÎªÒªµ÷Õû¿í¶ÈµÄÆ½¾ù´óĞ¡
+	// cxExpand ä¸ºè¦è°ƒæ•´å®½åº¦çš„å¹³å‡å¤§å°
 	//
 	
 	if(nAdjustables > 0) 
@@ -116,7 +116,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 
 	//
 	// Position the elements
-	// È·¶¨×Ó¿Ø¼şµÄÎ»ÖÃ
+	// ç¡®å®šå­æ§ä»¶çš„ä½ç½®
 	//
 
 	SIZE szRemaining = szAvailable;
@@ -136,7 +136,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 		}
 		
 		//
-		// µ÷Õû´øPaddingÊôĞÔµÄ¿Ø¼ş
+		// è°ƒæ•´å¸¦Paddingå±æ€§çš„æ§ä»¶
 		//
 		
 		RECT rcPadding = pControl->GetPadding();
@@ -148,7 +148,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 
 			//
 			// Distribute remaining to last element (usually round-off left-overs)
-			// ×îºóÒ»¸öÌØÊâ´¦ÀíÒ»ÏÂ£¬½«¼ÆËãÆ½¾ùÖµÊ£ÏÂµÄ·ÅÔÚ×îºóÒ»¸öÀïÃæ
+			// æœ€åä¸€ä¸ªç‰¹æ®Šå¤„ç†ä¸€ä¸‹ï¼Œå°†è®¡ç®—å¹³å‡å€¼å‰©ä¸‹çš„æ”¾åœ¨æœ€åä¸€ä¸ªé‡Œé¢
 			//
 
 			if( iAdjustable == nAdjustables ) {
@@ -178,7 +178,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 			sz.cy = pControl->GetMaxHeight();
 		
 		//
-		// Éú³É²¢ÉèÖÃ¿Ø¼şµÄĞÂµÄPos
+		// ç”Ÿæˆå¹¶è®¾ç½®æ§ä»¶çš„æ–°çš„Pos
 		//
 		
 		CUIRect rcCtrl(iPosX + rcPadding.left, rcTemp.top + rcPadding.top, 
@@ -187,7 +187,7 @@ void CUIHorizontalLayout::SetPos(const CUIRect& rc)
 		pControl->SetPos(rcCtrl);
 		
 		//
-		// µ÷ÕûChildPadding
+		// è°ƒæ•´ChildPadding
 		//
 		
 		iPosX += sz.cx + m_iChildPadding + rcPadding.left + rcPadding.right;
@@ -338,7 +338,7 @@ CUIRect CUIHorizontalLayout::GetThumbRect(bool bUseNew) const
 {
 	
 	//
-	// m_iSepWidth Îª¸ºÊıÔÚ×ó±ß£¬ÕıÊıÔÚÓÒ±ß
+	// m_iSepWidth ä¸ºè´Ÿæ•°åœ¨å·¦è¾¹ï¼Œæ­£æ•°åœ¨å³è¾¹
 	//
 	
 	if( (m_uButtonState & UISTATE_CAPTURED) != 0 && bUseNew) {

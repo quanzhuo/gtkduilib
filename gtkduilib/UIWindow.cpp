@@ -716,7 +716,7 @@ bool CUIWindow::Create(int x, int y, int nWidth, int nHeight)
     }
 
     //
-    // ÕâÀïÍ³Ò»ÉèÏÂ´°¿ÚÊôĞÔ
+    // è¿™é‡Œç»Ÿä¸€è®¾ä¸‹çª—å£å±æ€§
     //
 
     if (m_MinSizeInfo.IsNull()){
@@ -759,13 +759,13 @@ bool CUIWindow::InitControls(CUIControl* Root, CUIControl* pParent)
 {
 
     //
-    // ½«´°¿ÚÊµÀıÉèÖÃµ½Ã¿¸ö¿Ø¼şÖĞÈ¥
+    // å°†çª—å£å®ä¾‹è®¾ç½®åˆ°æ¯ä¸ªæ§ä»¶ä¸­å»
     //
 
     Root->SetOwnWindow(this, pParent, true);
 
     //
-    // ÊÕ¼¯ËùÓĞ¿Ø¼şµÄÃû³Æ,²¢¼ÓÈëµ½hashÁĞ±íÖĞ
+    // æ”¶é›†æ‰€æœ‰æ§ä»¶çš„åç§°,å¹¶åŠ å…¥åˆ°hashåˆ—è¡¨ä¸­
     //
 
     Root->FindControl(__FindControlFromNameHash, this, UIFIND_ALL);
@@ -1197,7 +1197,7 @@ void CUIWindow::SetMaxSize(const CUISize& size)
     /*GdkGeometry geometry;
 
     //
-    // ÕâÀïÈç¹ûÉèÖÃÁËsizebox.¾Í²»ÄÜÉèÖÃmax box
+    // è¿™é‡Œå¦‚æœè®¾ç½®äº†sizebox.å°±ä¸èƒ½è®¾ç½®max box
     //
 
     if (m_rcSizeBox.IsNull()){
@@ -1210,10 +1210,10 @@ void CUIWindow::SetMaxSize(const CUISize& size)
     m_MaxSizeInfo = size;
 
     //
-    // ×¢ÒâÕâ¸öº¯ÊıÔÚwindowsÏÂÊÇ²»ºÃÊ¹µÄ.
-    // ÒòÎª¹Ù·½windowsÏÂ×îĞÂµÄ°æ±¾ÊÇ3.6Õâ¸ö°æ±¾Àï
-    // µÄÕâ¸öº¯ÊıÊÇÓĞbugµÄ.¼´Ê¹ÉèÖÃÁËmax size.´°¿ÚÕÕÑù¿ÉÒÔÍÏ¶¯
-    // ÔÚlinuxÏÂ¾ÍÃ»ÎÊÌâ
+    // æ³¨æ„è¿™ä¸ªå‡½æ•°åœ¨windowsä¸‹æ˜¯ä¸å¥½ä½¿çš„.
+    // å› ä¸ºå®˜æ–¹windowsä¸‹æœ€æ–°çš„ç‰ˆæœ¬æ˜¯3.6è¿™ä¸ªç‰ˆæœ¬é‡Œ
+    // çš„è¿™ä¸ªå‡½æ•°æ˜¯æœ‰bugçš„.å³ä½¿è®¾ç½®äº†max size.çª—å£ç…§æ ·å¯ä»¥æ‹–åŠ¨
+    // åœ¨linuxä¸‹å°±æ²¡é—®é¢˜
     //
 
     gtk_window_set_geometry_hints(GTK_WINDOW(m_Widget), m_Widget,
@@ -1231,7 +1231,7 @@ void CUIWindow::SetMinSize(const CUISize& size)
     m_MinSizeInfo = size;
 
     //
-    // GDK_HINT_MIN_SIZEÍ¬ÉÏ.¼ûÉÏÃæSetMaxSizeµÄ×¢ÊÍ
+    // GDK_HINT_MIN_SIZEåŒä¸Š.è§ä¸Šé¢SetMaxSizeçš„æ³¨é‡Š
     //
 
     gtk_window_set_geometry_hints(GTK_WINDOW(m_Widget), m_Widget,

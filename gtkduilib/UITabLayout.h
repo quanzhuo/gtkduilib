@@ -1,5 +1,5 @@
 /*! \file UITabLayout.h
-	\brief Ñ¡Ïî¿¨ĞÍ²¼¾ÖÀàµÄÉùÃ÷
+	\brief é€‰é¡¹å¡å‹å¸ƒå±€ç±»çš„å£°æ˜
 	\author duilib
 	\date 13:10:2013   12:23
 	\copyright GNU Public License
@@ -10,7 +10,7 @@
 #define __UITABLAYOUT_H__
 
 /*! \class CTabLayoutUI
-	\brief Õâ¸öÀàÊÇÀ´ÃèÊöÑ¡Ïî¿¨ÀàĞÍ²¼¾ÖµÄ
+	\brief è¿™ä¸ªç±»æ˜¯æ¥æè¿°é€‰é¡¹å¡ç±»å‹å¸ƒå±€çš„
 */
 class CUITabLayout : public CUIContainer
 {
@@ -18,88 +18,88 @@ public:
 	CUITabLayout();
 
 	/** \fn CUIString GetClass() const
-	    \brief »ñÈ¡´ËÀàµÄÃû³Æ
-	    \return ÀàÃû
+	    \brief è·å–æ­¤ç±»çš„åç§°
+	    \return ç±»å
 	*/
 
 	CUIString GetClass() const;
 
 	/** \fn LPVOID GetInterface(const CUIString&  strName)
-	    \brief Í¨¹ıÃû³Æ»ñÈ¡½Ó¿Ú
-		\param [in] pstrName ½Ó¿ÚÃû³Æ
-	    \return ½Ó¿ÚµÄÖ¸Õë
+	    \brief é€šè¿‡åç§°è·å–æ¥å£
+		\param [in] pstrName æ¥å£åç§°
+	    \return æ¥å£çš„æŒ‡é’ˆ
 	*/
 
 	LPVOID GetInterface(const CUIString& strName);
 
 	/** \fn bool Add(CUIControl* pControl)
-	    \brief Ìí¼ÓÒ»¸öÑ¡Ïî¿¨
-		\param [in] pControl ĞÂÑ¡Ïî¿¨¿Ø¼ş
-	    \return ³É¹¦true ·ñÔòfalse
+	    \brief æ·»åŠ ä¸€ä¸ªé€‰é¡¹å¡
+		\param [in] pControl æ–°é€‰é¡¹å¡æ§ä»¶
+	    \return æˆåŠŸtrue å¦åˆ™false
 	*/
 
 	bool Add(CUIControl* pControl);
 
 	/** \fn bool AddAt(CUIControl* pControl, int iIndex)
-	    \brief ÔÚÖ¸¶¨Î»ÖÃÌí¼ÓÒ»¸öÑ¡Ïî¿¨
-		\param [in] pControl ĞÂÑ¡Ïî¿¨¿Ø¼ş
-		\param [in] iIndex ĞÂÑ¡Ïî¿¨µÄË÷Òı
-	    \return ³É¹¦true ·ñÔòfalse
+	    \brief åœ¨æŒ‡å®šä½ç½®æ·»åŠ ä¸€ä¸ªé€‰é¡¹å¡
+		\param [in] pControl æ–°é€‰é¡¹å¡æ§ä»¶
+		\param [in] iIndex æ–°é€‰é¡¹å¡çš„ç´¢å¼•
+	    \return æˆåŠŸtrue å¦åˆ™false
 	*/
 
 	bool AddAt(CUIControl* pControl, int iIndex);
 
 	/** \fn bool Remove(CUIControl* pControl)
-	    \brief É¾³ıÒ»¸öÑ¡Ïî¿¨
-		\param [in] pControl ĞÂÑ¡Ïî¿¨¿Ø¼ş
-	    \return ³É¹¦true ·ñÔòfalse
+	    \brief åˆ é™¤ä¸€ä¸ªé€‰é¡¹å¡
+		\param [in] pControl æ–°é€‰é¡¹å¡æ§ä»¶
+	    \return æˆåŠŸtrue å¦åˆ™false
 	*/
 
 	bool Remove(CUIControl* pControl);
 
 	/** \fn void RemoveAll()
-	    \brief É¾³ıËùÓĞÑ¡Ïî¿¨
-	    \return ³É¹¦true ·ñÔòfalse
+	    \brief åˆ é™¤æ‰€æœ‰é€‰é¡¹å¡
+	    \return æˆåŠŸtrue å¦åˆ™false
 	*/
 
 	void RemoveAll();
 
 	/** \fn int GetCurSel() const
-	    \brief »ñÈ¡µ±Ç°Ñ¡Ïî¿¨
-	    \return µ±Ç°Ñ¡Ïî¿¨µÄË÷Òı
+	    \brief è·å–å½“å‰é€‰é¡¹å¡
+	    \return å½“å‰é€‰é¡¹å¡çš„ç´¢å¼•
 	*/
 
 	int GetCurSel() const;
 
 	/** \fn bool SelectItem(int iIndex)
-	    \brief Í¨¹ıË÷ÒıÑ¡ÖĞÖ¸¶¨Ñ¡Ïî¿¨
-		\param [in] iIndex ÒªÑ¡ÖĞÑ¡Ïî¿¨µÄË÷Òı
-	    \return ³É¹¦true.·ñÔòfalse
+	    \brief é€šè¿‡ç´¢å¼•é€‰ä¸­æŒ‡å®šé€‰é¡¹å¡
+		\param [in] iIndex è¦é€‰ä¸­é€‰é¡¹å¡çš„ç´¢å¼•
+	    \return æˆåŠŸtrue.å¦åˆ™false
 	*/
 
 	bool SelectItem(int iIndex);
 
 	/** \fn bool SelectItem(CControlUI* pControl)
-	    \brief Í¨¹ı¿Ø¼şÖ¸ÕëÑ¡ÖĞÖ¸¶¨Ñ¡Ïî¿¨
-		\param [in] pControl ÒªÑ¡ÖĞÑ¡Ïî¿¨µÄ¿Ø¼şµÄÖ¸Õë
-	    \return ³É¹¦true.·ñÔòfalse
+	    \brief é€šè¿‡æ§ä»¶æŒ‡é’ˆé€‰ä¸­æŒ‡å®šé€‰é¡¹å¡
+		\param [in] pControl è¦é€‰ä¸­é€‰é¡¹å¡çš„æ§ä»¶çš„æŒ‡é’ˆ
+	    \return æˆåŠŸtrue.å¦åˆ™false
 	*/
 
 	bool SelectItem(CUIControl* pControl);
 
 	/** \fn void SetPos(const CUIRect& rc)
-	    \brief ÉèÖÃ¿Ø¼şĞÂµÄÎ»ÖÃ
-		\param [in] rc ¿Ø¼şµÄĞÂÎ»ÖÃ
-	    \return ³É¹¦true.·ñÔòfalse
+	    \brief è®¾ç½®æ§ä»¶æ–°çš„ä½ç½®
+		\param [in] rc æ§ä»¶çš„æ–°ä½ç½®
+	    \return æˆåŠŸtrue.å¦åˆ™false
 	*/
 
 	void SetPos(const CUIRect& rc);
 
 	/** \fn void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue)
-	    \brief ÉèÖÃ´Ë¿Ø¼şµÄÊôĞÔ
-		\param [in] pstrName ÊôĞÔÃû³Æ
-		\param [in] pstrValue ÊôĞÔÖµ
-		\return ÊÇtrue·ñfalse
+	    \brief è®¾ç½®æ­¤æ§ä»¶çš„å±æ€§
+		\param [in] pstrName å±æ€§åç§°
+		\param [in] pstrValue å±æ€§å€¼
+		\return æ˜¯trueå¦false
 	*/
 
 	void SetAttribute(LPCWSTR pstrName, LPCWSTR pstrValue);

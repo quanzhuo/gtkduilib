@@ -100,7 +100,7 @@ LDispatch:
 void CNotifyPump::NotifyPump(TNotifyUI& msg)
 {
     //
-    //±éÀúĞéÄâ´°¿Ú
+    //éå†è™šæ‹Ÿçª—å£
     //
 
     /*if( !msg.sVirtualWnd.IsEmpty() ){
@@ -116,7 +116,7 @@ void CNotifyPump::NotifyPump(TNotifyUI& msg)
     }*/
 
     //
-    // ±éÀúÖ÷´°¿Ú
+    // éå†ä¸»çª—å£
     //
 
     LoopDispatch(msg);

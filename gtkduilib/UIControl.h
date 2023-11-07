@@ -16,97 +16,97 @@ public:
 public:
     
     /** \fn virtual CUIString GetClass() const
-    	\brief »ñÈ¡ÀàÃû.
-    	\return ÀàÃû.
+    	\brief è·å–ç±»å.
+    	\return ç±»å.
     */
 
     virtual CUIString GetClass() const;
 
     /** \fn virtual LPVOID GetInterface(const CUIString& strName)
-    	\brief Í¨¹ı½Ó¿ÚÃû³Æ»ñÈ¡½Ó¿ÚÖ¸Õë.
-    	\param [in] strName ½Ó¿ÚÃû³Æ.
-    	\return ½Ó¿ÚÖ¸Õë,Ãû³Æ²»´æÔÚ·µ»ØNULL.
+    	\brief é€šè¿‡æ¥å£åç§°è·å–æ¥å£æŒ‡é’ˆ.
+    	\param [in] strName æ¥å£åç§°.
+    	\return æ¥å£æŒ‡é’ˆ,åç§°ä¸å­˜åœ¨è¿”å›NULL.
     */
     
     virtual LPVOID GetInterface(const CUIString& strName);
 
     /** \fn virtual CUIString GetName()
-        \brief »ñÈ¡¿Ø¼şÃû×Ö.
-        \return ¿Ø¼şµÄÃû×Ö.
+        \brief è·å–æ§ä»¶åå­—.
+        \return æ§ä»¶çš„åå­—.
     */
     
     virtual CUIString GetName() const;
     
     /** \fn virtual void SetName(CUIString &strName)
-    	\brief ÉèÖÃ¿Ø¼şÃû×Ö.
-    	\param [in] strName ¿Ø¼şÃû×ÖËù¶ÔÓ¦µÄ×Ö·û´®.
+    	\brief è®¾ç½®æ§ä»¶åå­—.
+    	\param [in] strName æ§ä»¶åå­—æ‰€å¯¹åº”çš„å­—ç¬¦ä¸².
     */
 
     virtual void SetName(const CUIString &strName);
 
     /** \fn DWORD GetBkColor() const
-    	\brief »ñÈ¡±³¾°ÑÕÉ«.
-    	\return ±³¾°ÑÕÉ«.
+    	\brief è·å–èƒŒæ™¯é¢œè‰².
+    	\return èƒŒæ™¯é¢œè‰².
     */
     
     DWORD GetBkColor() const;
     
     /** \fn void SetBkColor(DWORD dwBackColor)
-    	\brief ÉèÖÃ±³¾°ÑÕÉ«.
-    	\param [in] dwBackColor ±³¾°ÑÕÉ«.
+    	\brief è®¾ç½®èƒŒæ™¯é¢œè‰².
+    	\param [in] dwBackColor èƒŒæ™¯é¢œè‰².
     	\return .
     */
     
     void SetBkColor(DWORD dwBackColor);
     
     /** \fn DWORD GetBkColor2() const
-    	\brief »ñÈ¡½¥±ä±³¾°ÑÕÉ«2.
-    	\return ½¥±ä±³¾°ÑÕÉ«2.
+    	\brief è·å–æ¸å˜èƒŒæ™¯é¢œè‰²2.
+    	\return æ¸å˜èƒŒæ™¯é¢œè‰²2.
     */
     
     DWORD GetBkColor2() const;
     
     /** \fn void SetBkColor2(DWORD dwBackColor)
-    	\brief »ñÈ¡½¥±ä±³¾°ÑÕÉ«2.
-    	\param [in] dwBackColor ½¥±ä±³¾°ÑÕÉ«2.
+    	\brief è·å–æ¸å˜èƒŒæ™¯é¢œè‰²2.
+    	\param [in] dwBackColor æ¸å˜èƒŒæ™¯é¢œè‰²2.
     */
     
     void SetBkColor2(DWORD dwBackColor);
     
     /** \fn DWORD GetBkColor3() const
-    	\brief »ñÈ¡½¥±ä±³¾°ÑÕÉ«3.
-    	\return ½¥±ä±³¾°ÑÕÉ«3.
+    	\brief è·å–æ¸å˜èƒŒæ™¯é¢œè‰²3.
+    	\return æ¸å˜èƒŒæ™¯é¢œè‰²3.
     */
     
     DWORD GetBkColor3() const;
     
     /** \fn void SetBkColor3(DWORD dwBackColor)
-    	\brief »ñÈ¡½¥±ä±³¾°ÑÕÉ«3.
-    	\param [in] dwBackColor ½¥±ä±³¾°ÑÕÉ«3.
+    	\brief è·å–æ¸å˜èƒŒæ™¯é¢œè‰²3.
+    	\param [in] dwBackColor æ¸å˜èƒŒæ™¯é¢œè‰²3.
     */
     
     void SetBkColor3(DWORD dwBackColor);
     
     /** \fn CUIString GetBkImage() const
-    	\brief »ñÈ¡±³¾°Í¼Æ¬.
-    	\return ±³¾°Í¼Æ¬Â·¾¶.
+    	\brief è·å–èƒŒæ™¯å›¾ç‰‡.
+    	\return èƒŒæ™¯å›¾ç‰‡è·¯å¾„.
     */
     
     CUIString GetBkImage() const;
     
     /** \fn void SetBkImage(const CUIString& strImage)
-    	\brief ÉèÖÃ±³¾°Í¼Æ¬.
-    	\param [in] strImage ±³¾°Í¼Æ¬Â·¾¶.
+    	\brief è®¾ç½®èƒŒæ™¯å›¾ç‰‡.
+    	\param [in] strImage èƒŒæ™¯å›¾ç‰‡è·¯å¾„.
     */
     
     void SetBkImage(const CUIString& strImage);
     
     /** \fn bool DrawImage(cairo_t *cr, LPCWSTR lpstrImage, LPCWSTR lpstrModify = NULL)
-    	\brief ÔÚÖ¸¶¨µÄÉè±¸ContextÉÏ»­Í¼.
+    	\brief åœ¨æŒ‡å®šçš„è®¾å¤‡Contextä¸Šç”»å›¾.
     	\param [in] cr cairo context.
-        \param [in] lpstrImage Òª»æÖÆµÄÍ¼Æ¬µÄÂ·¾¶.
-        \param [in] lpstrModify ĞŞÕıµÄÍ¼Æ¬µÄ»æÖÆÊôĞÔ,Ä¬ÈÏÎª¿Õ.
-    	\return ³É¹¦·µ»Øtrue, ·ñÔòfalse.
+        \param [in] lpstrImage è¦ç»˜åˆ¶çš„å›¾ç‰‡çš„è·¯å¾„.
+        \param [in] lpstrModify ä¿®æ­£çš„å›¾ç‰‡çš„ç»˜åˆ¶å±æ€§,é»˜è®¤ä¸ºç©º.
+    	\return æˆåŠŸè¿”å›true, å¦åˆ™false.
     */
     
     bool DrawImage(cairo_t *cr, LPCWSTR lpstrImage, LPCWSTR lpstrModify = NULL);
@@ -465,7 +465,7 @@ public:
     virtual void PaintBorder(cairo_t *cr);
 
     //
-    // ±ß¿òÏà¹Ø
+    // è¾¹æ¡†ç›¸å…³
     //
     
     void SetBorderColor(DWORD dwBorderColor);
@@ -475,79 +475,79 @@ public:
     
 private:
 
-    /** ±³¾°ÑÕÉ«*/
+    /** èƒŒæ™¯é¢œè‰²*/
     DWORD m_dwBackColor;
 
-    /** ±³¾°ÑÕÉ«2*/
+    /** èƒŒæ™¯é¢œè‰²2*/
     DWORD m_dwBackColor2;
 
-    /** ±³¾°ÑÕÉ«2*/
+    /** èƒŒæ™¯é¢œè‰²2*/
     DWORD m_dwBackColor3;
 
-    /** È«¾Ömanager*/
+    /** å…¨å±€manager*/
     /*CUIManager *m_Manager;*/
     
-    /** ¿Ø¼şÊÇ·ñ¿ÉÓÃ*/
+    /** æ§ä»¶æ˜¯å¦å¯ç”¨*/
     bool m_bEnabled;
 
-    /** Êó±êÔÚ´Ë¿Ø¼şÉÏÊÇ·ñ¿ÉÓÃ*/
+    /** é¼ æ ‡åœ¨æ­¤æ§ä»¶ä¸Šæ˜¯å¦å¯ç”¨*/
     bool m_bMouseEnabled;
     
-    /** ¿Ø¼şÊÇ·ñĞèÒª¸üĞÂ*/
+    /** æ§ä»¶æ˜¯å¦éœ€è¦æ›´æ–°*/
     bool m_bUpdateNeeded;
     
-    /** ¿Ø¼şÊÇ·ñ¸üĞÂÁËpos*/
+    /** æ§ä»¶æ˜¯å¦æ›´æ–°äº†pos*/
     bool m_bSetPos;
     
-    /** ¿Ø¼şÊÇ·ñÊ¹ÓÃ¸¡µã×ø±ê*/
+    /** æ§ä»¶æ˜¯å¦ä½¿ç”¨æµ®ç‚¹åæ ‡*/
     bool m_bFloat;
     
-    /** ¿Ø¼şµÄ³¤¿í*/
+    /** æ§ä»¶çš„é•¿å®½*/
     CUISize m_cXY;
 
-    /** ¿Ø¼şµÄ×î´ó³¤¿í*/
+    /** æ§ä»¶çš„æœ€å¤§é•¿å®½*/
     CUISize m_cxyMax;
     
-    /** ¿Ø¼şµÄ×îĞ¡³¤¿í*/
+    /** æ§ä»¶çš„æœ€å°é•¿å®½*/
     CUISize m_cxyMin;
 
     CUIRect m_rcPadding;
 
 protected:
     
-    /** ¿Ø¼şÃû³Æ*/
+    /** æ§ä»¶åç§°*/
     CUIString m_strName;
 
-    /** ¿Ø¼şÊÇ·ñ¿É¼û*/
+    /** æ§ä»¶æ˜¯å¦å¯è§*/
     bool m_bVisible;
 
-    /** ÓÃÓÚ´¢´æ¸¸¿Ø¼ş½Úµã*/
+    /** ç”¨äºå‚¨å­˜çˆ¶æ§ä»¶èŠ‚ç‚¹*/
     CUIControl* m_Parent;
 
-    /** ±íÊ¾¿Ø¼şÊÇ·ñÔÚ»ñÈ¡½¹µãµÄ×´Ì¬ÏÂ*/
+    /** è¡¨ç¤ºæ§ä»¶æ˜¯å¦åœ¨è·å–ç„¦ç‚¹çš„çŠ¶æ€ä¸‹*/
     bool m_bFocused;
 
-    /** ´°¿Úrect*/
+    /** çª—å£rect*/
     CUIRect m_rcItem;
 
-    /** ¿Ø¼ş¹Ì¶¨³¤¿í*/
+    /** æ§ä»¶å›ºå®šé•¿å®½*/
     CUISize m_cxyFixed;
 
-    /** °üº¬¿Ø¼şµÄwindow*/
+    /** åŒ…å«æ§ä»¶çš„window*/
     CUIWindow *m_Window;
 
-    /** ¿Ø¼şpaintÇøÓò*/
+    /** æ§ä»¶paintåŒºåŸŸ*/
     CUIRect m_rcPaint;
     
-    /** ÓÃÓÚ±£´æ¿Ø¼şÏÔÊ¾µÄÎÄ×Ö*/
+    /** ç”¨äºä¿å­˜æ§ä»¶æ˜¾ç¤ºçš„æ–‡å­—*/
     CUIString m_strText;
     
-    /** ¼ÇÂ¼±ß¿ò´óĞ¡*/
+    /** è®°å½•è¾¹æ¡†å¤§å°*/
     int m_nBorderSize;
 
-    /** ±ß¿òÑÕÉ«*/
+    /** è¾¹æ¡†é¢œè‰²*/
     DWORD m_dwBorderColor;
 
-    /** ±³¾°Í¼Æ¬*/
+    /** èƒŒæ™¯å›¾ç‰‡*/
     CUIString m_strBackImage;
 };

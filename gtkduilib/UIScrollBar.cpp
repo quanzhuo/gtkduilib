@@ -398,7 +398,7 @@ void CUIScrollBar::SetPos(const CUIRect& rc)
 	if(m_bHorizontal){
 
         //
-        // ºáÏò¹ö¶¯Ìõ
+        // æ¨ªå‘æ»šåŠ¨æ¡
         //
 
 		int cx = rcTemp.GetWidth();
@@ -478,7 +478,7 @@ void CUIScrollBar::SetPos(const CUIRect& rc)
 	}else{
 
         //
-        // ÊúÏò¹ö¶¯Ìõ
+        // ç«–å‘æ»šåŠ¨æ¡
         //
 
 		int cy = rcTemp.bottom - rcTemp.top;

@@ -249,12 +249,12 @@ private:
     CStdStringPtrMap m_DefaultAttrHash;
 
 
-    /** ´°¿Ú±êÌâÀ¸(¿ÉÍÏ¶¯²¿·Ö)´óĞ¡*/
+    /** çª—å£æ ‡é¢˜æ (å¯æ‹–åŠ¨éƒ¨åˆ†)å¤§å°*/
     CUIRect m_rcCaption;
 
     bool m_bNeedUpdate;
 
-    /** Õâ¸ö±äÁ¿ÔÚµ÷ÓÃÁËShowº¯ÊıÖ®ºó²ÅÉèÖÃ³ÉTrue, È»ºóÔÙ´°¿ÚInvalidµÄÊ±ºòÅĞ¶ÏÒ»ÏÂ.±ÜÃâgtk³öÏÖ´íÎóĞÅÏ¢*/
+    /** è¿™ä¸ªå˜é‡åœ¨è°ƒç”¨äº†Showå‡½æ•°ä¹‹åæ‰è®¾ç½®æˆTrue, ç„¶åå†çª—å£Invalidçš„æ—¶å€™åˆ¤æ–­ä¸€ä¸‹.é¿å…gtkå‡ºç°é”™è¯¯ä¿¡æ¯*/
     bool m_bWindowShowed;
 
     /** cairo conext used for get font info*/

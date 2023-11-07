@@ -66,7 +66,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 	rcTemp = m_rcItem;
 
 	//
-	// µ÷ÕûÄÚ±ß¾à
+	// è°ƒæ•´å†…è¾¹è·
 	//
 
 	rcTemp.left += m_rcInset.left;
@@ -75,7 +75,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 	rcTemp.bottom -= m_rcInset.bottom;
 	
 	//
-	// Ã»ÓĞ×Ó¿Ø¼ş²»´¦Àí
+	// æ²¡æœ‰å­æ§ä»¶ä¸å¤„ç†
 	//
 	
 	if( m_items.GetSize() == 0) {
@@ -84,7 +84,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 	}
 	
 	//
-	// ¼õÈ¥¹ö¶¯ÌõµÄ³¤¿í
+	// å‡å»æ»šåŠ¨æ¡çš„é•¿å®½
 	//
 	
 	if( m_pVerticalScrollBar && m_pVerticalScrollBar->IsVisible() ) 
@@ -94,7 +94,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 
 	//
 	// Position the elements
-	// ¼ÆËãÁĞÊı
+	// è®¡ç®—åˆ—æ•°
 	//
 
 	if(m_szItem.cx > 0) 
@@ -106,7 +106,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 	int cxWidth;
 	
 	//
-	// ¼ÆËãÃ¿ÁĞµÄ¿í¶È
+	// è®¡ç®—æ¯åˆ—çš„å®½åº¦
 	//
 	
 	if(m_pHorizontalScrollBar && m_pHorizontalScrollBar->IsVisible()) 
@@ -145,7 +145,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 			int iIndex = iCount;
 			
 			//
-			// È¡±¾ĞĞ×î´óµÄ³¤¶È
+			// å–æœ¬è¡Œæœ€å¤§çš„é•¿åº¦
 			//
 			
 			for( int it2 = it1; it2 < m_items.GetSize(); it2++ ){
@@ -159,7 +159,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 				SIZE szAvailable = { rcTile.right - rcTile.left - rcPadding.left - rcPadding.right, 9999 };
 				
 				//
-				// µÚÒ»¸öºÍ×îºóÒ»¸öÖ»¼õÒ»´Îpadding
+				// ç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªåªå‡ä¸€æ¬¡padding
 				//
 				
 				if(iIndex == iCount || (iIndex + 1) % m_nColumns == 0){
@@ -169,7 +169,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 				}
 
 				//
-				// ²»ÄÜ³¬¹ı×î´óÖµºÍ×îĞ¡Öµ
+				// ä¸èƒ½è¶…è¿‡æœ€å¤§å€¼å’Œæœ€å°å€¼
 				//
 
 				if( szAvailable.cx < pControl->GetMinWidth()) 
@@ -196,7 +196,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 		RECT rcPadding = pControl->GetPadding();
 		
 		//
-		// µÚÒ»¸öºÍ×îºóÒ»¸öÌØÊâ´¦ÀíÒ»ÏÂ
+		// ç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªç‰¹æ®Šå¤„ç†ä¸€ä¸‹
 		//
 		
 		rcTile.left += rcPadding.left + m_iChildPadding / 2;
@@ -211,7 +211,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 
 		//
 		// Set position
-		// ½«³¤¶ÈÉèÖÃÎª±¾ĞĞ×î´óµÄ³¤¶È
+		// å°†é•¿åº¦è®¾ç½®ä¸ºæœ¬è¡Œæœ€å¤§çš„é•¿åº¦
 		//
 
 		rcTile.top = ptTile.y + rcPadding.top;
@@ -231,7 +231,7 @@ void CUITileLayout::SetPos(const CUIRect& rc)
 			szTile.cy = pControl->GetMaxHeight();
 		
 		//
-		// Éú³ÉĞÂµÄPos,²¢ÉèÖÃ
+		// ç”Ÿæˆæ–°çš„Pos,å¹¶è®¾ç½®
 		//
 		
 		RECT rcPos = {(rcTile.left + rcTile.right - szTile.cx) / 2, (rcTile.top + rcTile.bottom - szTile.cy) / 2,

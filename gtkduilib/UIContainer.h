@@ -105,7 +105,7 @@ protected:
     bool m_bAutoDestroy;
     bool m_bDelayedDestroy;
     bool m_bMouseChildEnabled;
-    bool m_bScrollProcess; // ·ÀÖ¹SetPosÑ­»·µ÷ÓÃ
+    bool m_bScrollProcess; // é˜²æ­¢SetPoså¾ªçŽ¯è°ƒç”¨
 
     CUIScrollBar* m_pVerticalScrollBar;
     CUIScrollBar* m_pHorizontalScrollBar;

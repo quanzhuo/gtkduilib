@@ -188,8 +188,8 @@ void CUIContainer::SetVisible(bool bVisible)
 }
 
 //
-// Âß¼­ÉÏ£¬¶ÔÓÚContainer¿Ø¼ş²»¹«¿ª´Ë·½·¨
-// µ÷ÓÃ´Ë·½·¨µÄ½á¹ûÊÇ£¬ÄÚ²¿×Ó¿Ø¼şÒş²Ø£¬¿Ø¼ş±¾ÉíÒÀÈ»ÏÔÊ¾£¬±³¾°µÈĞ§¹û´æÔÚ
+// é€»è¾‘ä¸Šï¼Œå¯¹äºContaineræ§ä»¶ä¸å…¬å¼€æ­¤æ–¹æ³•
+// è°ƒç”¨æ­¤æ–¹æ³•çš„ç»“æœæ˜¯ï¼Œå†…éƒ¨å­æ§ä»¶éšè—ï¼Œæ§ä»¶æœ¬èº«ä¾ç„¶æ˜¾ç¤ºï¼ŒèƒŒæ™¯ç­‰æ•ˆæœå­˜åœ¨
 //
 
 void CUIContainer::SetInternVisible(bool bVisible)
@@ -199,8 +199,8 @@ void CUIContainer::SetInternVisible(bool bVisible)
 	//for(int it = 0; it < m_items.GetSize(); it++){
 
         //
-		// ¿ØÖÆ×Ó¿Ø¼şÏÔÊ¾×´Ì¬
-		// InternVisible×´Ì¬Ó¦ÓÉ×Ó¿Ø¼ş×Ô¼º¿ØÖÆ
+		// æ§åˆ¶å­æ§ä»¶æ˜¾ç¤ºçŠ¶æ€
+		// InternVisibleçŠ¶æ€åº”ç”±å­æ§ä»¶è‡ªå·±æ§åˆ¶
 		//
 
         //static_cast<CUIControl*>(m_items[it])->SetInternVisible(IsVisible());
@@ -573,7 +573,7 @@ void CUIContainer::SetPos(const CUIRect& rc)
 		}else{
             
             //
-            // ËùÓĞ·Çfloat×Ó¿Ø¼ş·Å´óµ½Õû¸ö¿Í»§Çø
+            // æ‰€æœ‰éfloatå­æ§ä»¶æ”¾å¤§åˆ°æ•´ä¸ªå®¢æˆ·åŒº
             //
             
 			pControl->SetPos(rcTmp);
@@ -715,7 +715,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 		return;
 
     //
-    // ÉèÖÃ»æÖÆµÄÇøÓò, ÏÈ»æÖÆ×ÔÉí.
+    // è®¾ç½®ç»˜åˆ¶çš„åŒºåŸŸ, å…ˆç»˜åˆ¶è‡ªèº«.
     //
     
 	//CRenderClip clip;
@@ -726,7 +726,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 		CUIRect rc = m_rcItem;
 
         //
-        // È¥µôÄÚ±ß¾à
+        // å»æ‰å†…è¾¹è·
         //
         
 		rc.left += m_rcInset.left;
@@ -735,7 +735,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 		rc.bottom -= m_rcInset.bottom;
         
         //
-        // È¥µô¹ö¶¯Ìõ
+        // å»æ‰æ»šåŠ¨æ¡
         //
         
 		if(m_pVerticalScrollBar && m_pVerticalScrollBar->IsVisible()) 
@@ -744,13 +744,13 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 			rc.bottom -= m_pHorizontalScrollBar->GetFixedHeight();
 		
 		//
-		// »æÖÆ×Ó¿Ø¼ş
+		// ç»˜åˆ¶å­æ§ä»¶
 		//
 
 		if(!UIIntersectRect(&rcTemp, &rcPaint, &rc)){
 
             //
-            // Èç¹ûÒª»æÖÆµÄÇøÓòºÍContainerÃ»ÓĞÏà½»µÄµØ·½
+            // å¦‚æœè¦ç»˜åˆ¶çš„åŒºåŸŸå’ŒContaineræ²¡æœ‰ç›¸äº¤çš„åœ°æ–¹
             //
             
 			for(int it = 0; it < m_items.GetSize(); it++){
@@ -762,7 +762,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 					continue;
                 
                 //
-                // FloatÊ±×ÓÒª»æÖÆµÄ×Ó¿Ø¼şÇøÓòÇ¡ºÃÔÚContainerµÄÄÚ±ß¾àÀïµÄÇé¿ö
+                // Floatæ—¶å­è¦ç»˜åˆ¶çš„å­æ§ä»¶åŒºåŸŸæ°å¥½åœ¨Containerçš„å†…è¾¹è·é‡Œçš„æƒ…å†µ
                 //
                 
 				if(pControl ->IsFloat()){
@@ -774,7 +774,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 		}else{
             
             //
-            // ½øÒ»²½ËõĞ¡»æÖÆÇøÓò
+            // è¿›ä¸€æ­¥ç¼©å°ç»˜åˆ¶åŒºåŸŸ
             //
             
 			//CRenderClip childClip;
@@ -803,7 +803,7 @@ void CUIContainer::DoPaint(cairo_t* cr, const CUIRect& rcPaint)
 	}
 	
 	//
-	// »æÖÆ¹ö¶¯Ìõ
+	// ç»˜åˆ¶æ»šåŠ¨æ¡
 	//
 	
 	if(m_pVerticalScrollBar != NULL && m_pVerticalScrollBar->IsVisible()){

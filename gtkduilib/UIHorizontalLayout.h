@@ -1,6 +1,6 @@
 
 /*! \file UIHorizontalLayout.h
-	\brief ÃûÒåÁËºáÏò²¼¾ÖÀà
+	\brief åä¹‰äº†æ¨ªå‘å¸ƒå±€ç±»
 	\author duilib
 	\date 11:10:2013   19:19
 	\copyright GNU Public License
@@ -12,7 +12,7 @@
 
 	
 /*! \class CHorizontalLayoutUI
-    \brief Õâ¸öÀàÖ÷Òª·â×°ÁËºáÏò²¼¾ÖµÄÒ»¸ö¹¦ÄÜµÄÊµÏÖ
+    \brief è¿™ä¸ªç±»ä¸»è¦å°è£…äº†æ¨ªå‘å¸ƒå±€çš„ä¸€ä¸ªåŠŸèƒ½çš„å®ç°
 */
 
 class CUIHorizontalLayout : public CUIContainer
@@ -22,114 +22,114 @@ public:
 
 	
 	/** \fn LPCTSTR GetClass() const
-	    \brief »ñÈ¡´ËÀàµÄÃû³Æ
-	    \return ÀàÃû
+	    \brief è·å–æ­¤ç±»çš„åç§°
+	    \return ç±»å
 	*/
 	
 	CUIString GetClass() const;
 	
 	/** \fn LPVOID GetInterface(LPCTSTR pstrName)
-	    \brief Í¨¹ıÃû³Æ»ñÈ¡½Ó¿Ú
-		\param [in] pstrName ½Ó¿ÚÃû³Æ
-	    \return ½Ó¿ÚµÄÖ¸Õë
+	    \brief é€šè¿‡åç§°è·å–æ¥å£
+		\param [in] pstrName æ¥å£åç§°
+	    \return æ¥å£çš„æŒ‡é’ˆ
 	*/
 	
 	LPVOID GetInterface(const CUIString& pstrName);
 	
 	/** \fn LPVOID GetInterface(LPCTSTR pstrName)
-	    \brief Í¨¹ıÃû³Æ»ñÈ¡½Ó¿Ú
-		\param [in] pstrName ½Ó¿ÚÃû³Æ
-	    \return ½Ó¿ÚµÄÖ¸Õë
+	    \brief é€šè¿‡åç§°è·å–æ¥å£
+		\param [in] pstrName æ¥å£åç§°
+	    \return æ¥å£çš„æŒ‡é’ˆ
 	*/
 	
 	UINT GetControlFlags() const;
 	
 	/** \fn void SetSepWidth(int iWidth)
-	    \brief ·Ö¸ô·û¿í,Õı¸º±íÊ¾·Ö¸ô·ûÔÚ×ó±ß»¹ÊÇÓÒ±ß,Èç(-4)
+	    \brief åˆ†éš”ç¬¦å®½,æ­£è´Ÿè¡¨ç¤ºåˆ†éš”ç¬¦åœ¨å·¦è¾¹è¿˜æ˜¯å³è¾¹,å¦‚(-4)
 	*/
 	
 	void SetSepWidth(int iWidth);
 	
 	/** \fn int GetSepWidth() const
-	    \brief »ñÈ¡·Ö¸ô·û¿í
-	    \return ·Ö¸ô·û¿í
+	    \brief è·å–åˆ†éš”ç¬¦å®½
+	    \return åˆ†éš”ç¬¦å®½
 		\see SetSepWidth()
 	*/
 	
 	int GetSepWidth() const;
 	
 	/** \fn void SetSepImmMode(bool bImmediately)
-		\param [in] bImmediately ÊÇ·ñÉèÖÃ
-	    \brief ÉèÖÃÍÏ¶¯·Ö¸ô·ûÊÇ·ñÁ¢¼´¸Ä±ä´óĞ¡,Èç(false)
+		\param [in] bImmediately æ˜¯å¦è®¾ç½®
+	    \brief è®¾ç½®æ‹–åŠ¨åˆ†éš”ç¬¦æ˜¯å¦ç«‹å³æ”¹å˜å¤§å°,å¦‚(false)
 	*/
 	
 	void SetSepImmMode(bool bImmediately);
 	
 	/** \fn bool IsSepImmMode() const
-	    \brief ÊÇ·ñÉèÖÃÁËÍÏ¶¯·Ö¸ô·ûÁ¢¼´¸Ä±ä´óĞ¡µÄÊôĞÔ
-	    \return true ÒÑ¾­ÉèÖÃ false Ã»ÓĞÉèÖÃ
+	    \brief æ˜¯å¦è®¾ç½®äº†æ‹–åŠ¨åˆ†éš”ç¬¦ç«‹å³æ”¹å˜å¤§å°çš„å±æ€§
+	    \return true å·²ç»è®¾ç½® false æ²¡æœ‰è®¾ç½®
 		\see SetSepImmMode()
 	*/
 	
 	bool IsSepImmMode() const;
 	
 	/** \fn void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue)
-	    \brief ÉèÖÃ´Ë¿Ø¼şµÄÊôĞÔ
-		\param [in] pstrName ÊôĞÔÃû³Æ
-		\param [in] pstrValue ÊôĞÔÖµ
+	    \brief è®¾ç½®æ­¤æ§ä»¶çš„å±æ€§
+		\param [in] pstrName å±æ€§åç§°
+		\param [in] pstrValue å±æ€§å€¼
 	*/
 	
 	void SetAttribute(LPCWSTR pstrName, LPCWSTR pstrValue);
 	
 	/** \fn void DoEvent(TEventUI& event)
-	    \brief ÏìÓ¦ÊÂ¼şº¯Êı
-		\param [in,out] event ÊÂ¼şµÄÃèÊö
+	    \brief å“åº”äº‹ä»¶å‡½æ•°
+		\param [in,out] event äº‹ä»¶çš„æè¿°
 	*/
 	
 	void DoEvent(TEventUI& event);
 	
 	/** \fn void SetPos(const CUIRect& rc)
-	    \brief ÉèÖÃ¿Ø¼şĞÂµÄÎ»ÖÃ
-		\param [in] rc ĞÂµÄÎ»ÖÃ½á¹¹
-		\note Õâ¸öº¯Êı»áÔÚ´°¿Ú´óĞ¡¸Ä±äÊ±±»µ÷µ½¡£Èç¹ûËüÀïÃæµÄ×Ó²¼¾Ö¿Ø¼şµÄfloatÊôĞÔÉèÖÃÎª
-		      falseµÄ»°£¨´ú±íÏà¶Ô¶¨Î»£©Õâ¸öº¯Êı»áÖØĞÂ¼ÆËã×Ó²¼¾ÖµÄ´óĞ¡¡£È»ºó¶Ô×Ó²¼¾Ö½øĞĞ
-			  SetPos¡£´Ó¶øµ÷ÕûÕû¸ö²¼¾ÖµÄ´óĞ¡¡£
+	    \brief è®¾ç½®æ§ä»¶æ–°çš„ä½ç½®
+		\param [in] rc æ–°çš„ä½ç½®ç»“æ„
+		\note è¿™ä¸ªå‡½æ•°ä¼šåœ¨çª—å£å¤§å°æ”¹å˜æ—¶è¢«è°ƒåˆ°ã€‚å¦‚æœå®ƒé‡Œé¢çš„å­å¸ƒå±€æ§ä»¶çš„floatå±æ€§è®¾ç½®ä¸º
+		      falseçš„è¯ï¼ˆä»£è¡¨ç›¸å¯¹å®šä½ï¼‰è¿™ä¸ªå‡½æ•°ä¼šé‡æ–°è®¡ç®—å­å¸ƒå±€çš„å¤§å°ã€‚ç„¶åå¯¹å­å¸ƒå±€è¿›è¡Œ
+			  SetPosã€‚ä»è€Œè°ƒæ•´æ•´ä¸ªå¸ƒå±€çš„å¤§å°ã€‚
 	*/
 	
 	void SetPos(const CUIRect& rc);
 	
 	/** \fn void DoPostPaint(HDC hDC, const RECT& rcPaint)
-	    \brief Õâ¸öº¯ÊıÓÃÀ´»æÖÆ·Ö¸ô·ûµÄ±³¾°
-		\param hDC »­Ë¢¾ä±ú
-		\param rcPaint Õâ¸ö²ÎÊıÃ»ÓĞÓÃµ½
-		\note Ö»ÓĞÔÚsepimmÉèÖÃ³ÉÁËfalse£¬ÍÏ¶¯²Å»á³öÏÖ·Ö¸ô·û¡£
+	    \brief è¿™ä¸ªå‡½æ•°ç”¨æ¥ç»˜åˆ¶åˆ†éš”ç¬¦çš„èƒŒæ™¯
+		\param hDC ç”»åˆ·å¥æŸ„
+		\param rcPaint è¿™ä¸ªå‚æ•°æ²¡æœ‰ç”¨åˆ°
+		\note åªæœ‰åœ¨sepimmè®¾ç½®æˆäº†falseï¼Œæ‹–åŠ¨æ‰ä¼šå‡ºç°åˆ†éš”ç¬¦ã€‚
 	*/
 	
 	void DoPostPaint(cairo_t *cr, const CUIRect& rcPaint);
 	
 	/** \fn RECT GetThumbRect(bool bUseNew = false) const
-	    \brief Õâ¸öº¯ÊıÊ±»ñÈ¡·Ö¸ô·ûµÄRECT.
-		\param [in] bUseNew ÊÇ·ñÊ¹ÓÃĞÂÎ»ÖÃ 
-	    \return ·Ö¸ô·ûµÄRECT
+	    \brief è¿™ä¸ªå‡½æ•°æ—¶è·å–åˆ†éš”ç¬¦çš„RECT.
+		\param [in] bUseNew æ˜¯å¦ä½¿ç”¨æ–°ä½ç½® 
+	    \return åˆ†éš”ç¬¦çš„RECT
 	*/
 	
 	CUIRect GetThumbRect(bool bUseNew = false) const;
 
 protected:
 	
-	/** ·Ö¸ô·û¿í¶È*/
+	/** åˆ†éš”ç¬¦å®½åº¦*/
 	int m_iSepWidth;
 	
-	/** °´Å¥×´Ì¬*/
+	/** æŒ‰é’®çŠ¶æ€*/
 	UINT m_uButtonState;
 	
-	/** ÉÏÒ»´ÎÊó±êµÄÎ»ÖÃ*/
+	/** ä¸Šä¸€æ¬¡é¼ æ ‡çš„ä½ç½®*/
 	POINT ptLastMouse;
 
-	/** ¿Ø¼şĞÂÎ»ÖÃ*/
+	/** æ§ä»¶æ–°ä½ç½®*/
 	CUIRect m_rcNewPos;
 	
-	/** ÍÏ¶¯·Ö¸ô·ûÊÇ·ñÁ¢¼´¸Ä±ä´óĞ¡*/
+	/** æ‹–åŠ¨åˆ†éš”ç¬¦æ˜¯å¦ç«‹å³æ”¹å˜å¤§å°*/
 	bool m_bImmMode;
 };
 

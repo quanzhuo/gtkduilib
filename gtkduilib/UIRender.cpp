@@ -109,7 +109,7 @@ void CUIRender::DrawLine(cairo_t *cr, const CUIRect& rc, int nSize, DWORD dwPenC
     cairo_set_line_width(cr, nSize);
 
     //
-    // set antialiasing mode (¿¹¾â³İÄ£Ê½)
+    // set antialiasing mode (æŠ—é”¯é½¿æ¨¡å¼)
     //
 
     cairo_set_antialias(cr, CAIRO_ANTIALIAS_NONE);
@@ -228,7 +228,7 @@ void CUIRender::DrawText(cairo_t * cr, int x, int y, int nWidth, int nHeight,
     }else{
         
         //
-        // Ìæ»»µô×Ö·û´®ÖĞµÄ\r
+        // æ›¿æ¢æ‰å­—ç¬¦ä¸²ä¸­çš„\r
         //
         
         strTest.Replace(L"\\n", L"\n");
@@ -608,8 +608,8 @@ void CUIRender::DrawRect(cairo_t* cr, const CUIRect& rc, int nSize, DWORD dwColo
     OldMode = cairo_get_antialias(cr);
     
     //
-    // ²»Ê¹ÓÃ¿¹¾â³İÄ£Ê½, ·ñÔòºÍwindowsÏÂµÄ
-    // ÑÕÉ«²»Ò»Ñù
+    // ä¸ä½¿ç”¨æŠ—é”¯é½¿æ¨¡å¼, å¦åˆ™å’Œwindowsä¸‹çš„
+    // é¢œè‰²ä¸ä¸€æ ·
     //
     
     cairo_set_antialias(cr, CAIRO_ANTIALIAS_NONE);
@@ -628,7 +628,7 @@ void CUIRender::DrawRect(cairo_t* cr, const CUIRect& rc, int nSize, DWORD dwColo
         UIGetRValue(dwColor)/255.0);
 
     //
-    // rectangle.ÕâÀïÒªÉè³ÉºÍPS_INSIDEFRAMEÒ»ÑùµÄÑùÊ½.
+    // rectangle.è¿™é‡Œè¦è®¾æˆå’ŒPS_INSIDEFRAMEä¸€æ ·çš„æ ·å¼.
     //
     
     cairo_rectangle(cr, (double)rc.left + nSize/2.0, (double)rc.top + nSize/2.0, 

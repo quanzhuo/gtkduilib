@@ -69,8 +69,8 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
 
                 //
                 // check attribute by name.
-                // ×¢Òâ½âÎöµÄÊ±ºò size --> sizebox --> mininfo --> maxinfoµÄË³Ğò²»ÄÜ±ä
-                // ÒòÎªgtkÔÚÉèÖÃ²»¿ÉresizeµÄÊ±ºòÈç¹ûÏÈÉèÖÃÁËminifoºÍmaxinfoÔò²»»áÉúĞ§
+                // æ³¨æ„è§£æçš„æ—¶å€™ size --> sizebox --> mininfo --> maxinfoçš„é¡ºåºä¸èƒ½å˜
+                // å› ä¸ºgtkåœ¨è®¾ç½®ä¸å¯resizeçš„æ—¶å€™å¦‚æœå…ˆè®¾ç½®äº†minifoå’Œmaxinfoåˆ™ä¸ä¼šç”Ÿæ•ˆ
                 //
 
                 LPCWSTR pszValue;
@@ -80,7 +80,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 pszValue = at->value();
 
                 //
-                // size - ´°¿ÚµÄ³õÊ¼»¯´óĞ¡
+                // size - çª—å£çš„åˆå§‹åŒ–å¤§å°
                 //
 
                 if (strName == L"size"){
@@ -93,7 +93,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // sizebox - ´°¿Ú¿ÉÍÏ¶¯¸Ä±ä´°¿Ú´óĞ¡µÄ±ß¾à
+                // sizebox - çª—å£å¯æ‹–åŠ¨æ”¹å˜çª—å£å¤§å°çš„è¾¹è·
                 //
 
                 else if (strName == L"sizebox"){
@@ -104,8 +104,8 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // caption - ´°¿Ú¿ÉÍÏ¶¯µÄ±êÌâÀ¸´óĞ¡µÄ±ß¾à
-                // ×îºóÒ»¸ö²ÎÊıÊÇÖ¸ÀëÉÏ±ß¿òµÄ¾àÀë
+                // caption - çª—å£å¯æ‹–åŠ¨çš„æ ‡é¢˜æ å¤§å°çš„è¾¹è·
+                // æœ€åä¸€ä¸ªå‚æ•°æ˜¯æŒ‡ç¦»ä¸Šè¾¹æ¡†çš„è·ç¦»
                 //
 
                 else if (strName == L"caption"){
@@ -115,7 +115,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // roundcorner - ´°¿ÚÔ²½Ç´óĞ¡
+                // roundcorner - çª—å£åœ†è§’å¤§å°
                 //
 
                 else if (strName == L"roundcorner"){
@@ -133,7 +133,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // mininfo - ´°¿Ú×îĞ¡´óĞ¡
+                // mininfo - çª—å£æœ€å°å¤§å°
                 //
 
                 else if (strName == L"mininfo"){
@@ -144,7 +144,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // maxinfo - ´°¿Ú×î´ó´óĞ¡
+                // maxinfo - çª—å£æœ€å¤§å¤§å°
                 //
 
                 else if (strName == L"maxinfo"){
@@ -154,7 +154,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // showdirty - ÏÔÊ¾Òª»æÖÆÇøÓò
+                // showdirty - æ˜¾ç¤ºè¦ç»˜åˆ¶åŒºåŸŸ
                 //
 
                 else if (strName == L"showdirty"){
@@ -168,7 +168,7 @@ CUIControl* CDialogBuilder::Create(CUIWindow* pRootDialog, CUIControl* pParent)
                 }
 
                 //
-                // alpha - ´°¿ÚµÄalphaÖµ
+                // alpha - çª—å£çš„alphaå€¼
                 //
 
                 else if (strName == L"alpha"){
